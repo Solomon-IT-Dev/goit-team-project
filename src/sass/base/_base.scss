@@ -1,63 +1,69 @@
 // Главный стиль
 body {
-    background-color: $white-color;
+  background-color: $white-color;
 
-    // ! Для доп. фичи - открытие модального окна
-    // &.modal-open {
-    //     overflow: hidden;
-    // }
+  // ! Для доп. фичи - открытие модального окна
+  // &.modal-open {
+  //     overflow: hidden;
+  // }
 }
 
 // Контейнер
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
-    @include mq('phone') {
-        width: $phone;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+  @include mq('phone') {
+    width: $phone;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-    @include mq('tablet') {
-        width: $tablet;
-        padding-left: 34px;
-        padding-right: 34px;
-    }
+  @include mq('tablet') {
+    width: $tablet;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
 
-    @include mq('desktop') {
-        width: $desktop;
-        padding-left: 115px;
-        padding-right: 115px;
-    }
+  @include mq('desktop') {
+    width: $desktop;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
 }
 
 .header__container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .footer__container {
-    display: flex;
+  display: flex;
 }
 
 // Отзывчевые изображения
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 // Ссылки
 .link {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 // Списки
 .list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

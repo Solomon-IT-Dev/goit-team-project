@@ -1,20 +1,14 @@
+//@import './utils/placeholders';
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-.link {
-  color: #fff;
-
-  &:hover,
-  &:focus {
-    color: #d41443;
-  }
+.header {
+  position: relative;
+  background-color: $color__bkg--col-1;
 }
 
 .container--header {
@@ -22,92 +16,165 @@ a {
   //height: 62px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  margin-left: auto;
+  margin-right: auto;
+
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo--header {
   display: flex;
   align-items: center;
+
+  @extend %logo-text;
+  letter-spacing: -0.025em;
+
+  &__icon {
+    fill: $color__accent;
+    margin-right: 19px;
+  }
 }
 
 .btn--header {
   min-height: 44px;
+  min-width: 44px;
   border-radius: 22px;
   border-style: none;
   cursor: pointer;
-  outline: tomato 1px solid;
 
-  &__label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: inherit;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3125;
 
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 21px;
-    color: #d41443;
-  }
-  &__icon {
-    //fill: $color__accent;
-    // fill: #d41443;
-    stroke: #d41443;
-  }
-  &__icon--inv {
-    fill: #fff;
-  }
+  display: flex;
+  align-items: center;
+  text-align: center;
 
-  &:hover,
-  &:focus {
-    background-color: #ecebeb;
+  &.inverted {
+    &:hover,
+    &:focus {
+      background-color: $color__btn--inv-hover;
+    }
   }
 }
 
+.btn--header__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: $color__accent;
+}
+
+.btn--header__icon {
+  display: block;
+  fill: $color__text--secondary;
+  stroke: $color__text--secondary;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+
+  &.inverted {
+    stroke: $color__accent;
+
+    .btn--header:hover & {
+      stroke: $color__accent--hover;
+    }
+  }
+}
+
+.main-menu__btn--close {
+  margin-left: auto;
+  margin-right: -7px;
+  margin-bottom: 15px;
+  background-color: transparent;
+
+  & .btn--header__icon {
+    stroke: $color__text--secondary;
+  }
+}
+
+.btn--main-menu {
+  margin-right: -15px;
+  background-color: transparent;
+}
+
+$main-menu__width: 250px;
 .main-menu {
   display: flex;
-  padding-top: 15px;
+  z-index: 10;
+  padding-top: 8px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 15px;
 
+  position: absolute;
+  top: 0;
+  left: 0;
+
   flex-direction: column-reverse;
   justify-content: flex-end;
-  width: 250px;
+  width: $main-menu__width;
   height: 100vh;
-  background-color: #e17992;
+  background-color: $color__mob-menu--bkg;
+}
 
-  &__item {
-    &::after,
-    &:not(:last-child)::before {
-      display: block;
-      content: '';
-      width: 100%;
-      height: 1px;
-      background-color: #e18298;
-    }
+.main-menu__item {
+  &::after,
+  &:not(:last-child)::before {
+    display: block;
+    content: '';
+    margin-left: -20px;
+    margin-right: -20px;
+    width: $main-menu__width;
+    height: 1px;
+    background-color: $color__mob-menu--separator;
+  }
 
-    &:first-child {
-      padding-top: 15px;
-    }
-    &:last-child {
-      padding-bottom: 15px;
-    }
+  &:first-child {
+    padding-top: 15px;
+  }
+  &:last-child {
+    padding-bottom: 15px;
+  }
+}
+
+.nav__item {
+  color: $color__text--secondary;
+
+  &--active {
+    color: $color__accent;
+  }
+  &:hover,
+  &:focus {
+    color: $color__accent;
   }
 }
 
 .main-menu__btn--buy {
-  background-color: #fff;
+  //background-color: $color__text--secondary;
   width: 100%;
 
   margin-bottom: 19px;
-}
 
-.main-menu__btn--buy .btn--header__icon {
-  margin-left: 30px;
-  //stroke: #d41443;
+  & .btn--header__icon {
+    margin-left: 30px;
+    stroke: $color__accent;
+  }
 }
 
 .nav {
@@ -120,21 +187,4 @@ a {
 
 .nav-list {
   //smth
-}
-
-.main-menu__btn--close {
-  display: block;
-  margin-left: auto;
-  //   width: 14px;
-  //   height: 14px;
-  margin-bottom: 15px;
-  background-color: transparent;
-}
-
-.btn--header__icon--inv {
-  stroke: #fff;
-}
-
-.btn--main-menu {
-  background-color: transparent;
 }
