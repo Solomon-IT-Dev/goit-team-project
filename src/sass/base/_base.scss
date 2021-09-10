@@ -1,0 +1,75 @@
+// Главный стиль
+body {
+    background-color: $white-color;
+
+    // ! Для доп. фичи - открытие модального окна
+    // &.modal-open {
+    //     overflow: hidden;
+    // }
+}
+
+// Контейнер
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $before-desktop) {
+        justify-content: space-between;
+    }
+}
+
+.footer__container {
+    display: flex;
+
+    @media screen and (max-width: $before-tablet) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $before-desktop) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    @media screen and (min-width: $desktop) {
+        align-items: baseline;
+    }
+}
+
+// Отзывчевые изображения
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Ссылки
+.link {
+    text-decoration: none;
+}
+
+// Списки
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
