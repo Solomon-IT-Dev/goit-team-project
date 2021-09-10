@@ -1,0 +1,140 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
+}
+
+.container--header {
+  max-width: 480px;
+  //height: 62px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo--header {
+  display: flex;
+  align-items: center;
+}
+
+.btn--header {
+  min-height: 44px;
+  border-radius: 22px;
+  border-style: none;
+  cursor: pointer;
+  outline: tomato 1px solid;
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #d41443;
+  }
+  &__icon {
+    //fill: $color__accent;
+    // fill: #d41443;
+    stroke: #d41443;
+  }
+  &__icon--inv {
+    fill: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.main-menu {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  width: 250px;
+  height: 100vh;
+  background-color: #e17992;
+
+  &__item {
+    &::after,
+    &:not(:last-child)::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #e18298;
+    }
+
+    &:first-child {
+      padding-top: 15px;
+    }
+    &:last-child {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.main-menu__btn--buy {
+  background-color: #fff;
+  width: 100%;
+
+  margin-bottom: 19px;
+}
+
+.main-menu__btn--buy .btn--header__icon {
+  margin-left: 30px;
+  //stroke: #d41443;
+}
+
+.nav {
+  &__item {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.nav-list {
+  //smth
+}
+
+.main-menu__btn--close {
+  display: block;
+  margin-left: auto;
+  //   width: 14px;
+  //   height: 14px;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+
+.btn--header__icon--inv {
+  stroke: #fff;
+}
+
+.btn--main-menu {
+  background-color: transparent;
+}
