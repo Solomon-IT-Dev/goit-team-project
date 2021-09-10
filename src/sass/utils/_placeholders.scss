@@ -1,6 +1,6 @@
 // * Плейсхолдер для текста
 
-    // Стили для logo
+    // Logo
         %logo-text {
             font-family: $secondaryFont;
             font-weight: $normal-weight;
@@ -11,6 +11,61 @@
 
             color: $color__accent;
         }
+    
+    // Header Navigation
+        %nav-text {
+            font-family: $mainFont;
+            font-weight: $bold-weight;
 
+            color: $color__text--secondary;
 
+            @include transition(color);
+
+            &:hover,
+            &:focus {
+                color: $color__accent;
+            }
+        }
+
+    // Hero
+        %hero-title {
+            font-family: $secondaryFont;
+            font-weight: $normal-weight;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+
+            color: $color__accent;
+        }
+
+        %hero-suptitle {
+            font-family: $secondaryFont;
+            font-weight: $normal-weight;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+
+            color: $color__text--secondary;
+        }
+
+        %hero-text {
+            font-family: $mainFont;
+            font-weight: $normal-weight;
+
+            color: $color__text--secondary;
+        }
+
+        %hero-numbers {
+            font-family: $secondaryFont;
+            font-weight: $normal-weight;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+
+            color: $color__accent; 
+        }
+
+        %hero-numbers-subtext {
+            font-family: $mainFont;
+            font-weight: $normal-weight;
+
+            color: $color__text--secondary;
+        }
 // * 
