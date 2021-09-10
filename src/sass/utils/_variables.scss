@@ -1,6 +1,6 @@
-// variables
+// * variables
 
-//color variables in SASS format
+// color variables in SASS format
 
 $color__text--primary: #000000;
 $color__text--secondary: #ffffff;
@@ -26,3 +26,13 @@ $color__icon-social: #fea5bb;
 
 $color__mob-menu--bkg: #e17992;
 $color__mob-menu--separator: #e18298;
+
+
+
+// breakpoints
+
+$phone: 480px;
+$befor-tablet: 767px;
+$tablet: 768px;
+$befor-desktop: 1279px;
+$desktop: 1280px;
