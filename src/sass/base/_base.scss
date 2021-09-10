@@ -1,63 +1,85 @@
-// Главный стиль
-body {
-    background-color: $white-color;
+// * Главный стиль
 
-    // ! Для доп. фичи - открытие модального окна
-    // &.modal-open {
-    //     overflow: hidden;
-    // }
-}
+    body {
+        background-color: $white-color;
 
-// Контейнер
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @include mq('phone') {
-        width: $phone;
-        padding-left: 20px;
-        padding-right: 20px;
+        // ! Для доп. фичи - открытие модального окна
+        // &.modal-open {
+        //     overflow: hidden;
+        // }
     }
 
-    @include mq('tablet') {
-        width: $tablet;
-        padding-left: 34px;
-        padding-right: 34px;
-    }
-
-    @include mq('desktop') {
-        width: $desktop;
-        padding-left: 115px;
-        padding-right: 115px;
-    }
-}
-
-.header__container {
-    display: flex;
-    align-items: center;
-}
-
-.footer__container {
-    display: flex;
-}
-
-// Отзывчевые изображения
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-// Ссылки
-.link {
-    text-decoration: none;
-}
-
-// Списки
-.list {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    li {
     padding: 0;
-    margin: 0;
-    list-style: none;
-}
+        margin: 0; 
+    }
+
+    // Отзывчевые изображения
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+    // Ссылки
+        a {
+            text-decoration: none;
+        }
+
+    // Списки
+        li {
+            list-style: none;
+        }
+
+    // Кнопки
+        button {
+            border: none;
+            cursor: pointer;
+        }
+
+
+
+// * Контейнер
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @include mq('phone') {
+            width: $phone;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include mq('tablet') {
+            width: $tablet;
+            padding-left: 34px;
+            padding-right: 34px;
+        }
+
+        @include mq('desktop') {
+            width: $desktop;
+            padding-left: 115px;
+            padding-right: 115px;
+        }
+    }
+
+    .header__container {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__container {
+        display: flex;
+    }
+
