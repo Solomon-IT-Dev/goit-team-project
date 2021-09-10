@@ -19,7 +19,7 @@
 
             color: $color__text--secondary;
 
-            @include transition(color);
+            // @include transition(color);
 
             &:hover,
             &:focus {
