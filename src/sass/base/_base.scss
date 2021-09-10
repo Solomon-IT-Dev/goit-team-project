@@ -15,44 +15,32 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 
-    @media screen and (min-width: $mobile) {
-        width: $mobile;
+    @include mq('phone') {
+        width: $phone;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    @media screen and (min-width: $tablet) {
+    @include mq('tablet') {
         width: $tablet;
+        padding-left: 34px;
+        padding-right: 34px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq('desktop') {
         width: $desktop;
+        padding-left: 115px;
+        padding-right: 115px;
     }
 }
 
 .header__container {
     display: flex;
     align-items: center;
-
-    @media screen and (max-width: $before-desktop) {
-        justify-content: space-between;
-    }
 }
 
 .footer__container {
     display: flex;
-
-    @media screen and (max-width: $before-tablet) {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    @media screen and (min-width: $tablet) and (max-width: $before-desktop) {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    @media screen and (min-width: $desktop) {
-        align-items: baseline;
-    }
 }
 
 // Отзывчевые изображения
