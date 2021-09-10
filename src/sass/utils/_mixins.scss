@@ -6,6 +6,7 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+
 // * Подставляет медиазапрос
 
     @mixin mq($width, $type: min) {
@@ -36,5 +37,44 @@
         );
 
 
+// * Кастомный контейнер
+
+    @mixin custom-box($w, $h, $bg-color, $radius, $shadow, $padding, $margin) {
+        width: $w;
+        height: $h;
+        background-color: $bg-color;
+        padding: $padding;
+        margin: $margin;
+        border-radius: $radius;
+    }
 
 
+// * Кастомное модальное окно
+
+    @mixin custom-modal-box($min-w, $min-h, $radius) {
+        min-width: $min-w;
+        min-height: $min-h;
+        width: auto;
+        height: auto;
+        box-sizing: border-box;
+        border-radius: $radius;
+        border: none;
+    }
+
+
+// * Центрирование контента
+
+    @mixin centered-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+// * Центрирование текста
+
+    @mixin centered-text {
+        text-align: center;
+        line-height: 100%;
+        vertical-align: middle;
+    }
