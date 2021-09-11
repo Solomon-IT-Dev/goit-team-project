@@ -1,19 +1,7 @@
-// * Плейсхолдер для текста
+// * Плейсхолдеры для кнопок
 
-// Стили для logo
-%logo-text {
-  font-family: $secondaryFont;
-  font-weight: $normal-weight;
-  font-size: 26px;
-  line-height: 30px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 
-  color: $color__accent;
-}
-
-// *
-
+// Для геометрии кнопки
 @mixin btn-geometry($base: 44px) {
   //large 44px, medium 40px, small 24px
   min-height: $base;
@@ -26,6 +14,8 @@
   padding-right: $base / 2;
 }
 
+
+// Кнопка в трьох размерах
 %btn {
   @include btn-geometry(44px);
 
@@ -39,14 +29,19 @@
   color: $color__text--secondary;
   background-color: $color__accent;
 
+  @include transition(background-color);
+
   &:hover,
   &:focus {
     background-color: $color__accent--hover;
   }
 
+  // Класс для красной кнопкт
   &.inverted {
     color: $color__accent;
     background-color: $color__text--secondary;
+
+    @include transition(color, background-color);
 
     &:hover,
     &:focus {
@@ -54,6 +49,7 @@
     }
   }
 
+  // Модификаторы для названия класса
   &--medium {
     @extend %btn;
     @include btn-geometry(40px);
@@ -65,24 +61,26 @@
   }
 }
 
+// Текст кнопки
 %btn__label {
-  font-family: DM Sans;
+  font-family: $mainFont;
   font-style: normal;
-  font-weight: 700; //bold
+  font-weight: $bold-weight;
   font-size: 16px;
   line-height: 1.3125;
   letter-spacing: 0;
 
+  // Модификаторы для названия класса
   &--medium {
     @extend %btn__label;
-    font-weight: 400; //normal
+    font-weight: $normal-weight;
     font-size: 14px;
     line-height: 1.2857;
   }
 
   &--small {
     @extend %btn__label;
-    font-weight: 400; //normal
+    font-weight: $normal-weight;
     font-size: 8px;
     line-height: 1.25;
   }
