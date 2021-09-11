@@ -3,56 +3,144 @@
   padding-bottom: 20px;
   background-color: $color__bkg--mid-section;
   text-align: center;
-  background-repeat: no-repeat;
-  // background-position: unset;
-  // background-size: cover;
-  background-image: url(../images/about-bgmilk-mob.png);
-}
-.about__suptitle {
-  margin-bottom: 15px;
-  font-family: $secondaryFont;
-  font-size: 18px;
-  line-height: 1.17;
-  text-align: center;
-  text-transform: uppercase;
-  color: $color__accent--secondary;
+  @include mq('tablet', 'max') {
+    background-image: url(../images/about-bgmilk-left-mob.png),
+      url(../images/about-bgmilk-right-mob.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about-bgmilk-left-mob@2x.png),
+        url(../images/about-bgmilk-right-mob@2x.png);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/about-bgmilk-left-mob@3x.png),
+        url(../images/about-bgmilk-right-mob@3x.png);
+    }
+    background-repeat: no-repeat;
+    background-position: 0% 90%, 100% 90%;
+    background-size: 40px, 69px;
+  }
+  @include mq('desktop') {
+    background-image: url(../images/about-bgmilk-left-desk.png),
+      url(../images/about-bgmilk-right-desk.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about-bgmilk-left-desk@2x.png),
+        url(../images/about-bgmilk-right-desk@2x.png);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/about-bgmilk-left-desk@3x.png),
+        url(../images/about-bgmilk-right-desk@3x.png);
+    }
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 100%;
+    background-size: 162px, 269px;
+  }
 }
 
 .about__title {
-  margin-top: 0;
-  margin-bottom: 26px;
-  font-family: $secondaryFont;
-  font-size: 34px;
+  @extend %section-title;
   line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $color__accent;
+  @include mq('tablet', 'max') {
+    margin-bottom: 26px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 200px;
+    font-size: 34px;
+  }
+  @include mq('tablet') {
+    margin-bottom: 50px;
+    font-size: 48px;
+  }
+  @include mq('desktop') {
+    margin-bottom: 55px;
+    font-size: 58px;
+  }
+}
+.about__suptitle {
+  margin-bottom: 15px;
+  @extend %section-suptitle;
+  @include mq('tablet', 'max') {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+  @include mq('tablet') {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @include mq('desktop') {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.about__box {
+  @include mq('tablet') {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  @include mq('desktop') {
+    align-items: center;
+  }
 }
 .about__img-box {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 280px;
+  @include mq('tablet', 'max') {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 280px;
+  }
+  @include mq-tablet-only {
+    margin-bottom: 104px;
+    width: 340px;
+  }
+  @include mq('desktop') {
+    width: 516px;
+  }
 }
 
 .about__text-box {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: calc(100% - 100px);
   text-align: left;
+  @include mq('tablet', 'max') {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: calc(100% - 100px);
+  }
+  @include mq('tablet') {
+    max-width: 340px;
+  }
+  @include mq('desktop') {
+    max-width: 463px;
+  }
 }
 .about__text {
-  margin-top: 0;
-  margin-bottom: 28px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.62;
-  color: $color__text--low-contrast;
+  @extend %about-text-lighten;
+  &--without-margin {
+    margin-bottom: 0;
+  }
+  @include mq('tablet', 'max') {
+    margin-bottom: 28px;
+    font-size: 12px;
+    line-height: 1.62;
+  }
+  @include mq('tablet') {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.76;
+  }
+  @include mq('desktop') {
+    margin-bottom: 32px;
+    line-height: 1.92;
+  }
 }
 
 .about__text--darken {
+  margin-bottom: 28px;
   color: $black-color;
+  @include mq('desktop') {
+    margin-bottom: 35px;
+  }
 }
 .about__button {
+  // @extend %btn;
+  // @extend %btn__label--medium;
   @include centered-content;
   min-width: 176px;
   height: 44px;
@@ -70,4 +158,22 @@
   &:focus {
     background-color: $color__btn--inv-hover;
   }
+  @include mq('tablet', 'max') {
+    margin-top: 20px;
+  }
+  @include mq('tablet') {
+    margin-top: 60px;
+    font-size: 14px;
+    line-height: 1.31;
+  }
+  @include mq('desktop') {
+    margin-top: 45px;
+    font-size: 16px;
+  }
+}
+
+.about__btn-icon {
+  margin-left: 12px;
+  height: 12px;
+  width: 12px;
 }

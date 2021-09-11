@@ -3,12 +3,12 @@
  * Все паршалы подключаются сюда.
  */
 
+@import './utils/normalize';
 @import './base/fonts';
 @import './utils/variables';
+@import './utils/mixins';
 @import './utils/placeholders-text';
 @import './utils/placeholders-btn';
-@import './utils/mixins';
-@import './utils/normalize';
 @import './utils/visually-hidden';
 @import './base/base';
 @import './components/about';

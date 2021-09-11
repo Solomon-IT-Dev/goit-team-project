@@ -1,23 +1,23 @@
 <section class="about" id="about-us">
     <div class="container">
         <span class="about__suptitle">tradition and love</span>
-        <h2 class="about__title">how it’s </br> made?</h2>
+        <h2 class="about__title">how it’s made?</h2>
         <div class="about__box">
             <div class="about__img-box">
             <picture class="about__image">
-                <source srcset="../src/images/about-cow-mob.png 1x, 
-                                ../src/images/about-cow-mob@2x.png 2x, 
-                                ../src/images/about-cow-mob@3x.png 3x"
+                <source srcset="./images/about-cow-mob.png 1x, 
+                                ./images/about-cow-mob@2x.png 2x, 
+                                ./images/about-cow-mob@3x.png 3x"
                                 media="(max-width: 767px)" />
-                <source srcset="../src/images/about-cow-desk.png 1x, 
-                                ../src/images/about-cow-desk@2x.png 2x, 
-                                ../src/images/about-cow-desk@3x.png 3x"
+                <source srcset="./images/about-cow-desk.png 1x, 
+                                ./images/about-cow-desk@2x.png 2x, 
+                                ./images/about-cow-desk@3x.png 3x"
                                 media="(min-width: 1200px)" />
-                <source srcset="../src/images/about-cow-tab.png 1x, 
-                                ../src/images/about-cow-tab@2x.png 2x, 
-                                ../src/images/about-cow-tab@3x.png 3x"
+                <source srcset="./images/about-cow-tab.png 1x, 
+                                ./images/about-cow-tab@2x.png 2x, 
+                                ./images/about-cow-tab@3x.png 3x"
                                 media="(min-width: 768px)" />
-            <img src="../src/images/about-cow-mob.png" alt="Jug of milk and cow">
+            <img src="./images/about-cow-mob.png" alt="Jug of milk and cow">
             </picture>
             </div>
             <div class="about__text-box">
@@ -28,9 +28,14 @@
                     rhoncus orci in imperdiet placerat.
                     Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
                     tincidunt.</p>
-                <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>
-                <button type="button" class="about__button">Read more</button>
+                <p class="about__text about__text--without-margin">Aliquam erat volutpat. Aenean accumsan.</p>
+                <button type="button" class="about__button">Read more
+                    <svg class="about__btn-icon" width="12" height="12">
+                        <use href="./images/icons.svg#icon-vector-1"></use>
+                    </svg>
+                </button>
             </div>
+            
         </div>
 
     </div>
