@@ -9,7 +9,7 @@
     menuBtn.classList.toggle("is-open");
     menuBtnClose.classList.toggle("is-open");
     menuRef.classList.toggle("is-open");
-    menuRef.classList.toggle("visually-hidden");
+    //menuRef.classList.toggle("visually-hidden");
     //mainRef.classList.toggle("is-overflow-hidden");
     const expanded = menuBtn.getAttribute("aria-expanded") === "true" || false;
     menuBtn.setAttribute("aria-expanded", !expanded)

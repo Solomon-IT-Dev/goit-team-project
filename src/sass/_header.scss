@@ -1,23 +1,17 @@
 //@import './utils/placeholders';
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .header {
   position: relative;
   background-color: $color__bkg--col-1;
 }
 
 .container--header {
-  max-width: 480px;
+  max-width: $phone;
   //height: 62px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 6px;
-  padding-bottom: 6px;
+  //padding-bottom: 6px;
 
   margin-left: auto;
   margin-right: auto;
@@ -25,6 +19,19 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mq('tablet', min) {
+    max-width: $tablet;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 37px;
+  }
+
+  @include mq('desktop', min) {
+    max-width: 1280px;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
 }
 
 .logo--header {
@@ -37,6 +44,10 @@ ul {
   &__icon {
     fill: $color__accent;
     margin-right: 19px;
+  }
+
+  @include mq('desktop', min) {
+    margin-left: -70px;
   }
 }
 
@@ -57,8 +68,10 @@ ul {
   display: flex;
   align-items: center;
   text-align: center;
+  background-color: $color__accent;
 
   &.inverted {
+    background-color: $color__text--secondary;
     &:hover,
     &:focus {
       background-color: $color__btn--inv-hover;
@@ -84,8 +97,6 @@ ul {
   display: block;
   fill: $color__text--secondary;
   stroke: $color__text--secondary;
-  margin-left: auto;
-  margin-right: auto;
   overflow: visible;
 
   &.inverted {
@@ -97,7 +108,12 @@ ul {
   }
 }
 
-.main-menu__btn--close {
+.centered-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inverted.main-menu__btn--close {
   margin-left: auto;
   margin-right: -7px;
   margin-bottom: 15px;
@@ -106,14 +122,32 @@ ul {
   & .btn--header__icon {
     stroke: $color__text--secondary;
   }
+
+  @include mq('tablet', min) {
+    margin-right: -5px;
+  }
+  @include mq('desktop', min) {
+    display: none;
+  }
 }
 
-.btn--main-menu {
+.inverted.btn--main-menu {
   margin-right: -15px;
   background-color: transparent;
+
+  @include mq('tablet', min) {
+    display: block;
+    margin-right: 15px; //175px;
+  }
+  @include mq('desktop', min) {
+    display: none;
+  }
 }
 
-$main-menu__width: 250px;
+.header-buttons {
+  display: flex;
+}
+
 .main-menu {
   display: flex;
   z-index: 10;
@@ -124,36 +158,49 @@ $main-menu__width: 250px;
 
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 
   flex-direction: column-reverse;
   justify-content: flex-end;
-  width: $main-menu__width;
+  width: 250px;
   height: 100vh;
   background-color: $color__mob-menu--bkg;
+  filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
+
+  transform: translate(calc(100% + 28px), 0);
+  transition: transform 250ms ease-in-out;
+
+  &.is-open {
+    transform: translate(0, 0);
+  }
+
+  @include mq('tablet', min) {
+    width: 254px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @include mq('desktop', min) {
+    position: static;
+    transform: translate(0, 0);
+    transition: none;
+    //flex-direction: row;
+    height: auto;
+    width: auto;
+    filter: none;
+    padding: 0;
+    background-color: transparent;
+  }
 }
 
 .main-menu__item {
-  &::after,
-  &:not(:last-child)::before {
-    display: block;
-    content: '';
-    margin-left: -20px;
-    margin-right: -20px;
-    width: $main-menu__width;
-    height: 1px;
-    background-color: $color__mob-menu--separator;
-  }
+  display: block;
 
-  &:first-child {
-    padding-top: 15px;
-  }
-  &:last-child {
-    padding-bottom: 15px;
-  }
-}
-
-.nav__item {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2857;
+  letter-spacing: 0;
   color: $color__text--secondary;
 
   &--active {
@@ -163,11 +210,53 @@ $main-menu__width: 250px;
   &:focus {
     color: $color__accent;
   }
+
+  @include mq('desktop', max) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    .nav__item:first-child & {
+      padding-top: 15px;
+    }
+    .nav__item:last-child & {
+      padding-bottom: 15px;
+    }
+  }
+
+  @include mq('desktop', min) {
+    font-size: 16px;
+    line-height: 1.3125;
+  }
+}
+
+.nav-list {
+  @include mq('desktop', min) {
+    display: flex;
+  }
+}
+
+.nav__item {
+  @include mq('desktop', max) {
+    &::after,
+    &:not(:last-child)::before {
+      display: block;
+      content: '';
+      margin-left: -20px;
+      margin-right: -20px;
+      width: calc(100% + 2 * 20px);
+      height: 1px;
+      background-color: $color__mob-menu--separator;
+    }
+  }
+  @include mq('desktop', min) {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
 }
 
 .main-menu__btn--buy {
   //background-color: $color__text--secondary;
-  width: 100%;
+  //width: 100%;
 
   margin-bottom: 19px;
 
@@ -175,16 +264,29 @@ $main-menu__width: 250px;
     margin-left: 30px;
     stroke: $color__accent;
   }
-}
 
-.nav {
-  &__item {
-    display: block;
-    padding-top: 12px;
-    padding-bottom: 12px;
+  @include mq('tablet', min) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @include mq('desktop', min) {
+    display: none;
   }
 }
 
-.nav-list {
-  //smth
+.main-menu__btn--buy-tablet {
+  display: none;
+  width: 160px;
+  & .btn--header__icon {
+    margin-left: 15px;
+    stroke: $color__accent;
+  }
+
+  @include mq('tablet', min) {
+    display: block;
+    & .btn--header__icon {
+      margin-right: 0;
+    }
+  }
 }

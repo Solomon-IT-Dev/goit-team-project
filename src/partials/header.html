@@ -5,16 +5,16 @@
                 <use href="./icons/icon-sprite.svg#logo"></use>
             </svg>
             Icecream
-        </a>
+        </a>    
 
-        <div class="main-menu visually-hidden" data-menu id="main-menu">
+        <div class="main-menu" data-menu id="main-menu">
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="main-menu__item"><a class="link nav__item nav__item--active" href="#header">Home</a></li>
-                    <li class="main-menu__item"><a class="link nav__item" href="#about-us">About us</a></li>
-                    <li class="main-menu__item"><a class="link nav__item" href="#how-its-made">How it’s made?</a></li>
-                    <li class="main-menu__item"><a class="link nav__item" href="#our-produts">Our products</a></li>
-                    <li class="main-menu__item"><a class="link nav__item" href="#contact">Contact</a></li>
+                    <li class="nav__item"><a class="link main-menu__item main-menu__item--active" href="#header">Home</a></li>
+                    <li class="nav__item"><a class="link main-menu__item" href="#about-us">About us</a></li>
+                    <li class="nav__item"><a class="link main-menu__item" href="#how-its-made">How it’s made?</a></li>
+                    <li class="nav__item"><a class="link main-menu__item" href="#our-produts">Our products</a></li>
+                    <li class="nav__item"><a class="link main-menu__item" href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -30,17 +30,29 @@
 
             <button type="button" data-menu-button-close class="btn--header inverted main-menu__btn--close" aria-label="Mobile menu closer" aria-expanded="false"
                 aria-controls="main-menu">
-                <svg class="btn--header__label btn--header__icon" width="14" height="14">
+                <svg class="btn--header__label btn--header__icon centered-block" width="14" height="14">
                     <use href="./icons/icon-sprite.svg#btn-close"></use>
                 </svg>
             </button>
         </div>
 
-        <button type="button" data-menu-button class="btn--header inverted btn--main-menu" aria-label="Mobile menu opener" aria-expanded="false" aria-controls="main-menu">
-            <!-- <img src="./icons/Burger.svg" alt=""> -->
-            <svg class="btn--header__icon inverted" width="20" height="12">
-                <use href="./icons/icon-sprite.svg#btn-menu"></use>
-            </svg>
-        </button>
+        <div class="header-buttons">
+            <button type="button" data-menu-button class="btn--header inverted btn--main-menu" aria-label="Mobile menu opener" aria-expanded="false" aria-controls="main-menu">
+                <!-- <img src="./icons/Burger.svg" alt=""> -->
+                <svg class="btn--header__icon inverted centered-block" width="20" height="12">
+                    <use href="./icons/icon-sprite.svg#btn-menu"></use>
+                </svg>
+            </button>
+
+            <button type="button" class="btn--header inverted main-menu__btn--buy-tablet ">
+                <span class="btn--header__label">
+                    Buy now
+                    <!-- <img class="btn--header__icon" src="./icons/angle.svg" alt="" width="8" height="10"> -->
+                    <svg class="btn--header__icon" width="5.26" height="8">
+                        <use href="./icons/icon-sprite.svg#angle-right"></use>
+                    </svg>
+                </span>
+            </button>
+        </div>
     </div>
 </header>
