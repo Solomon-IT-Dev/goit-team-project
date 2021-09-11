@@ -1,6 +1,5 @@
 // * Плейсхолдеры для кнопок
 
-
 // Для геометрии кнопки
 @mixin btn-geometry($base: 44px) {
   //large 44px, medium 40px, small 24px
@@ -13,7 +12,6 @@
   padding-left: $base / 2;
   padding-right: $base / 2;
 }
-
 
 // Кнопка в трьох размерах
 %btn {
@@ -36,7 +34,7 @@
     background-color: $color__accent--hover;
   }
 
-  // Класс для красной кнопкт
+  // Класс для білої кнопки з червоним текстом (інвертована)
   &.inverted {
     color: $color__accent;
     background-color: $color__text--secondary;
