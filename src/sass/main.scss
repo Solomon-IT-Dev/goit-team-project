@@ -6,7 +6,10 @@
 @import './utils/variables';
 @import './utils/placeholders';
 @import './utils/mixins';
+@import './utils/normalize';
 @import './utils/visually-hidden';
 @import './base/fonts';
 @import './base/base';
 @import './components/about';
+
+@import './components/footer';
