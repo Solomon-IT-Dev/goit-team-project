@@ -139,36 +139,20 @@
   }
 }
 .about__button {
-  // @extend %btn;
-  // @extend %btn__label--medium;
-  @include centered-content;
-  min-width: 176px;
-  height: 44px;
-  color: $color__accent;
-  background-color: $white-color;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.29;
-  cursor: pointer;
-  border: transparent;
-  border-radius: 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    background-color: $color__btn--inv-hover;
-  }
+  @extend %btn;
+  @extend %btn__label--medium;
   @include mq('tablet', 'max') {
     margin-top: 20px;
   }
   @include mq('tablet') {
     margin-top: 60px;
-    font-size: 14px;
-    line-height: 1.31;
   }
   @include mq('desktop') {
     margin-top: 45px;
+    // @extend %btn__label;
+    font-weight: $bold-weight;
     font-size: 16px;
+    line-height: 1.3125;
   }
 }
 
