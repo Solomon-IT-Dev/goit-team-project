@@ -1,0 +1,89 @@
+// * Плейсхолдер для текста
+
+// Стили для logo
+%logo-text {
+  font-family: $secondaryFont;
+  font-weight: $normal-weight;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $color__accent;
+}
+
+// *
+
+@mixin btn-geometry($base: 44px) {
+  //large 44px, medium 40px, small 24px
+  min-height: $base;
+  min-width: $base;
+  border-radius: $base / 2;
+  border-style: none;
+  cursor: pointer;
+
+  padding-left: $base / 2;
+  padding-right: $base / 2;
+}
+
+%btn {
+  @include btn-geometry(44px);
+
+  font-family: inherit;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  color: $color__text--secondary;
+  background-color: $color__accent;
+
+  &:hover,
+  &:focus {
+    background-color: $color__accent--hover;
+  }
+
+  &.inverted {
+    color: $color__accent;
+    background-color: $color__text--secondary;
+
+    &:hover,
+    &:focus {
+      background-color: $color__btn--inv-hover;
+    }
+  }
+
+  &--medium {
+    @extend %btn;
+    @include btn-geometry(40px);
+  }
+
+  &--small {
+    @extend %btn;
+    @include btn-geometry(24px);
+  }
+}
+
+%btn__label {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700; //bold
+  font-size: 16px;
+  line-height: 1.3125;
+  letter-spacing: 0;
+
+  &--medium {
+    @extend %btn__label;
+    font-weight: 400; //normal
+    font-size: 14px;
+    line-height: 1.2857;
+  }
+
+  &--small {
+    @extend %btn__label;
+    font-weight: 400; //normal
+    font-size: 8px;
+    line-height: 1.25;
+  }
+}
