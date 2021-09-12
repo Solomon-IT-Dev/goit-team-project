@@ -1,356 +1,355 @@
 // * Плейсхолдеры для текста
 
-    // Logo
-        %logo-text {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            font-size: 26px;
-            line-height: 30px;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-
-            color: $color__accent;
-        }
-    
-    // Header Navigation
-        %nav-text {
-            font-family: $mainFont;
-            font-weight: $bold-weight;
-
-            color: $color__text--secondary;
-
-            @include transition(color);
-
-            &:hover,
-            &:focus {
-                color: $color__accent;
-            }
-        }
-
-    // Hero
-        %hero-title {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-
-            color: $color__accent;
-        }
-
-        %hero-suptitle {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-
-            color: $color__text--secondary;
-        }
-
-        %hero-text {
-            font-family: $mainFont;
-            font-weight: $normal-weight;
-
-            color: $color__text--secondary;
-        }
-
-        %hero-numbers {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-
-            color: $color__accent; 
-        }
-
-        %hero-numbers-subtext {
-            font-family: $mainFont;
-            font-weight: $normal-weight;
-
-            color: $color__text--secondary;
-        }
-
-
-
-    // ! Any section
-        %section-title {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            letter-spacing: 0.04em;
-            text-align: center;
-            text-transform: uppercase;
-
-            color: $color__accent;
-
-            @include mq('desktop') {
-                letter-spacing: 0.06em;
-            }
-        }
-
-        %section-suptitle {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            letter-spacing: 0em;
-            text-align: center;
-            text-transform: uppercase;
-
-            color: $color__accent--secondary;
-
-            @include mq('desktop') {
-                letter-spacing: 0.04em;
-            }
-        }
-
-
+  // Logo
+    %logo-text {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      color: $color__accent;
+    }
+
+  // Header Navigation
+    %nav-text {
+      font-family: $mainFont;
+      font-weight: $bold-weight;
+
+      color: $color__text--secondary;
+
+      @include transition(color);
+
+      &:hover,
+      &:focus {
+        color: $color__accent;
+      }
+    }
+
+  // Hero
+    %hero-title {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      color: $color__accent;
+    }
+
+    %hero-suptitle {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      color: $color__text--secondary;
+    }
+
+    %hero-text {
+      font-family: $mainFont;
+      font-weight: $normal-weight;
+
+      color: $color__text--secondary;
+    }
+
+    %hero-numbers {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      color: $color__accent;
+    }
+
+    %hero-numbers-subtext {
+      font-family: $mainFont;
+      font-weight: $normal-weight;
+
+      color: $color__text--secondary;
+    }
+
+
+
+// ! Any section
+  %section-title {
+    font-family: $secondaryFont;
+    font-weight: $normal-weight;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $color__accent;
+
+    @include mq('desktop') {
+      letter-spacing: 0.06em;
+    }
+  }
+
+  %section-suptitle {
+    font-family: $secondaryFont;
+    font-weight: $normal-weight;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $color__accent--secondary;
+
+    @include mq('desktop') {
+      letter-spacing: 0.04em;
+    }
+  }
+
+
 
-    // Products section
-        %product-card-title {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            letter-spacing: 0.04em;
-            text-align: center;
-            text-transform: uppercase;
-
-            color: $color__text--secondary;
-        }
-
-        %product-card-text {
-            font-family: $mainFont;
-            font-weight: $bold-weight;
-            letter-spacing: 0.04em;
-            text-align: center;
-
-            color: $color__text--secondary;
-        }
-
-    // About section
-        %about-text {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0em;
-
-            color: $color__text--primary;
-
-            @include mq('desktop') {
-                letter-spacing: 0.04em;
-            }
-        }
-
-        %about-text-lighten {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0em;
-
-            color: $color__text--low-contrast;
-
-            @include mq('tablet') {
-                letter-spacing: 0.04em;
-            }
-        }
-
-    // Advantages section
-        %advantages-numbers {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-
-            color: $color__accent;
-        }
-
-
-        %advantages-text {
-            font-family: $mainFont;
-            font-weight: $bold-weight;
-            letter-spacing: 0em;
-
-            color: $color__text--primary;
-
-            @include mq('desktop') {
-                letter-spacing: 0.02em;
-            }
-        }
-    
-    // Customer Reviews section
-        %customer-text {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0em;
-            text-align: center;
-
-            color: $color__text--primary;
-
-            @include mq('tablet') {
-                letter-spacing: 0.04em;
-            }
-        }
-
-        %customer-name {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            text-align: center;
-
-            color: $color__text--primary;
-        }
-
-    // Contacts section
-        %contacts-title {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0.04em;
-            text-align: center;
-
-            color: $color__text--secondary;
-        }
-
-        %contacts-city {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0.04em;
-
-            color: $color__text--primary;
-        }
-
-        %contacts-text {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0em;
-
-            color: $color__text--low-contrast;
-
-            @include mq('desktop') {
-                letter-spacing: 0.04em;
-            }
-        }
-
-        %contacts-days {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0em;
-
-            color: $color__text--primary;
-
-            @include mq('desktop') {
-                letter-spacing: 0.04em;
-            }
-        }
-
-        %contacts-time {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0em;
-
-            color: $color__accent--secondary;
-        }
-
-        %contacts-tel-mail {
-            font-family: $mainFont;
-            font-weight: $medium-weight;
-            letter-spacing: 0em;
-
-            color: $color__text--low-contrast;
-        }
-
-    // Footer section
-        %footer-title {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            font-size: 34px;
-            line-height: 39px;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-
-            color: $color__accent;
-
-            @include mq('tablet') {
-                font-size: 48px;
-                line-height: 55px;
-                letter-spacing: 0.06em;
-            }
-
-            @include mq('desktop') {
-                font-size: 58px;
-                line-height: 66px;
-            }
-        }
-
-        %footer-suptitle {
-            font-family: $secondaryFont;
-            font-weight: $normal-weight;
-            font-size: 18px;
-            line-height: 21px;
-            letter-spacing: 0em;
-            text-transform: uppercase;
-
-            color: $color__accent--secondary;
-
-            @include mq('tablet') {
-                font-size: 26px;
-                line-height: 30px;
-                letter-spacing: 0.04em;
-            }
-
-            @include mq('desktop') {
-                font-size: 30px;
-                line-height: 34px;
-            }
-        }
-
-        %footer-call-slogan {
-            font-family: $mainFont;
-            font-weight: $bold-weight;
-            font-size: 12px;
-            line-height: 22px;
-            letter-spacing: 0em;
-            text-align: right;
-
-            color: $color__text--primary;
-
-            @include mq('tablet') {
-                font-size: 14px;
-                line-height: 26px;
-            }
-
-            @include mq('desktop') {
-                font-size: 16px;
-                line-height: 30px;
-                letter-spacing: 0.02em;
-            }
-        }
-
-        %footer-tel {
-            font-family: $mainFont;
-            font-weight: $bold-weight;
-            font-size: 12px;
-            line-height: 22px;
-            letter-spacing: 0em;
-
-            color: $color__accent;
-
-            @include mq('tablet') {
-                font-size: 14px;
-                line-height: 26px;
-            }
-
-            @include mq('desktop') {
-                font-size: 16px;
-                line-height: 30px;
-                letter-spacing: 0.02em;
-            }
-        }
-
-        %footer-rights {
-            font-family: $mainFont;
-            font-weight: $bold-weight;
-            font-size: 14px;
-            line-height: 21px;
-            letter-spacing: 0em;
-            text-align: center;
-
-            color: $color__text--low-contrast;
-
-            @include mq('tablet') {
-                font-size: 14px;
-                line-height: 26px;
-                letter-spacing: 0.02em;
-            }
-        }
+  // Products section
+    %product-card-title {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: $color__text--secondary;
+    }
+
+    %product-card-text {
+      font-family: $mainFont;
+      font-weight: $bold-weight;
+      letter-spacing: 0.04em;
+      text-align: center;
+
+      color: $color__text--secondary;
+    }
+
+  // About section
+    %about-text {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0em;
+
+      color: $color__text--primary;
+
+      @include mq('desktop') {
+        letter-spacing: 0.04em;
+      }
+    }
+
+    %about-text-lighten {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0em;
+
+      color: $color__text--low-contrast;
+
+      @include mq('tablet') {
+        letter-spacing: 0.04em;
+      }
+    }
+
+  // Advantages section
+    %advantages-numbers {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      color: $color__accent;
+    }
+
+    %advantages-text {
+      font-family: $mainFont;
+      font-weight: $bold-weight;
+      letter-spacing: 0em;
+
+      color: $color__text--primary;
+
+      @include mq('desktop') {
+        letter-spacing: 0.02em;
+      }
+    }
+
+  // Customer Reviews section
+    %customer-text {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0em;
+      text-align: center;
+
+      color: $color__text--primary;
+
+      @include mq('tablet') {
+        letter-spacing: 0.04em;
+      }
+    }
+
+    %customer-name {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      text-align: center;
+
+      color: $color__text--primary;
+    }
+
+  // Contacts section
+    %contacts-title {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0.04em;
+      text-align: center;
+
+      color: $color__text--secondary;
+    }
+
+    %contacts-city {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0.04em;
+
+      color: $color__text--primary;
+    }
+
+    %contacts-text {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0em;
+
+      color: $color__text--low-contrast;
+
+      @include mq('desktop') {
+        letter-spacing: 0.04em;
+      }
+    }
+
+    %contacts-days {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0em;
+
+      color: $color__text--primary;
+
+      @include mq('desktop') {
+        letter-spacing: 0.04em;
+      }
+    }
+
+    %contacts-time {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0em;
+
+      color: $color__accent--secondary;
+    }
+
+    %contacts-tel-mail {
+      font-family: $mainFont;
+      font-weight: $medium-weight;
+      letter-spacing: 0em;
+
+      color: $color__text--low-contrast;
+    }
+
+  // Footer section
+    %footer-title {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      font-size: 34px;
+      line-height: 39px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      color: $color__accent;
+
+      @include mq('tablet') {
+        font-size: 48px;
+        line-height: 55px;
+        letter-spacing: 0.06em;
+      }
+
+      @include mq('desktop') {
+        font-size: 58px;
+        line-height: 66px;
+      }
+    }
+
+    %footer-suptitle {
+      font-family: $secondaryFont;
+      font-weight: $normal-weight;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-transform: uppercase;
+
+      color: $color__accent--secondary;
+
+      @include mq('tablet') {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+      }
+
+      @include mq('desktop') {
+        font-size: 30px;
+        line-height: 34px;
+      }
+    }
+
+    %footer-call-slogan {
+      font-family: $mainFont;
+      font-weight: $bold-weight;
+      font-size: 12px;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: right;
+
+      color: $color__text--primary;
+
+      @include mq('tablet') {
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      @include mq('desktop') {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    %footer-tel {
+      font-family: $mainFont;
+      font-weight: $bold-weight;
+      font-size: 12px;
+      line-height: 22px;
+      letter-spacing: 0em;
+
+      color: $color__accent;
+
+      @include mq('tablet') {
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      @include mq('desktop') {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    %footer-copyright {
+      font-family: $mainFont;
+      font-weight: $bold-weight;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: center;
+
+      color: $color__text--low-contrast;
+
+      @include mq('tablet') {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+      }
+    }
