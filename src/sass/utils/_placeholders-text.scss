@@ -19,7 +19,7 @@
 
   color: $color__text--secondary;
 
-  //   @include transition(color);
+  @include transition(color);
 
   &:hover,
   &:focus {
@@ -342,10 +342,4 @@
   text-align: center;
 
   color: $color__text--low-contrast;
-
-  @include mq('tablet') {
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: 0.02em;
-  }
 }
