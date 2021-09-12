@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заголовок страницы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+        integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+        crossorigin="anonymous" />
+        <link rel="javascript" href="../swiper.js" />
 </head>
 <body>
     <section class="reviews">
     <div class="reviews_con container">
-        <ul class="reviews_ list">
+        <ul class="reviews_slide">
             <li>
-                <div class="reviews">
-                    <img src="../images/reviews-client1.png" alt="Author image">
+                <div class="reviews_photo">
+                    <picture>
+                        <source
+                            srcset="../images/reviews-client1.png 1x, ../images/reviews-client1@2x.pnj 2x, ../images/reviews-client1@3x.png 3x">
+                        <img src="../images/reviews-client1.png" alt="Author image">
+                    </picture>
 
                     <p>Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
                 congue. Lorem ipsum primis in nibh vel risus.</p>
                     
-                <ul class="cd-author-info">
-                        <li>MyName</li>
-                        <li>CEO, AmberCreative</li>
-                    </ul>
+                <h2 class="reviews_name-adres">
+                    Emily, Los Angeles
+                </h2>
+                <div class="reviews_pagination"></div>
+
                 </div>
                 
             </li>
-    
             <li>
-                <!-- ... -->
+                <div class="reviews">
+                    <picture>
+                        <source
+                            srcset="../images/reviews-client2.png 1x, ../images/reviews-client2@2x.pnj 2x, ../images/reviews-client2@3x.png 3x">
+                        <img src="../images/reviews-client2.png" alt="Author image">
+                    </picture>
+                    
+                
+                    <p>Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc,
+                        accumsan
+                        congue.</p>
+                
+                    <h2 class="reviews_name-adres">
+                        Dory, Chicago
+                    </h2>
+                
+                </div>
             </li>
-    
             <li>
-                <!-- ... -->
+                <div class="reviews">
+                    <picture>
+                        <source srcset="../images/reviews-client3.png 1x, ../images/reviews-client3@2x.pnj 2x, ../images/reviews-client3@3x.png 3x">
+                        <img src="../images/reviews-client3.png" alt="Author image">
+                    </picture>
+                    
+                
+                    <p>Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc.</p>
+                
+                    <h2 class="reviews_name-adres">
+                        Lora, New York
+                    </h2>
+                
+                </div>
             </li>
-        </ul> <!-- cd-testimonials -->
+        </ul> 
     </div>
 
 </section>
