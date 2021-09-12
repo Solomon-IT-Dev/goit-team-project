@@ -47,7 +47,7 @@
   }
   @include mq('tablet') {
     margin-bottom: 50px;
-    font-size: 48px;
+    font-size: $text-xl;
   }
   @include mq('desktop') {
     margin-bottom: 55px;
@@ -117,12 +117,12 @@
   }
   @include mq('tablet', 'max') {
     margin-bottom: 28px;
-    font-size: 12px;
+    font-size: $text-xxs;
     line-height: 1.62;
   }
   @include mq('tablet') {
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: $text-xs;
     line-height: 1.76;
   }
   @include mq('desktop') {
@@ -149,7 +149,6 @@
   }
   @include mq('desktop') {
     margin-top: 45px;
-    // @extend %btn__label;
     font-weight: $bold-weight;
     font-size: 16px;
     line-height: 1.3125;
@@ -157,7 +156,7 @@
 }
 
 .about__btn-icon {
-  margin-left: 12px;
+  margin-left: 10px;
   height: 12px;
   width: 12px;
 }
