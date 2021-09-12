@@ -1,171 +1,85 @@
 // * Плейсхолдеры для кнопок
 
-// Для геометрии кнопки
-@mixin btn-geometry($base: 44px) {
-  //large 44px, medium 40px, small 24px
-  min-height: $base;
-  min-width: $base;
-  border-radius: $base / 2;
-  border-style: none;
-  cursor: pointer;
+  // Для геометрии кнопки
+  @mixin btn-geometry($base: 44px) {
+    //large 44px, medium 40px, small 24px
+    min-height: $base;
+    min-width: $base;
+    border-radius: $base / 2;
+    border-style: none;
+    cursor: pointer;
 
-  padding-left: $base / 2;
-  padding-right: $base / 2;
-}
-
-// Кнопка в трьох размерах
-%btn {
-  @include btn-geometry(44px);
-
-  font-family: inherit;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-
-  color: $color__text--secondary;
-  background-color: $color__accent;
-
-  @include transition(background-color);
-
-  &:hover,
-  &:focus {
-    background-color: $color__accent--hover;
+    padding-left: $base / 2;
+    padding-right: $base / 2;
   }
 
-  // Класс для білої кнопки з червоним текстом (інвертована)
-  &.inverted {
-    color: $color__accent;
-    background-color: $color__text--secondary;
+  // Кнопка в трьох размерах
+  %btn {
+    @include btn-geometry(44px);
 
-    @include transition(color, background-color);
+    font-family: inherit;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    color: $color__text--secondary;
+    background-color: $color__accent;
+
+    @include transition(background-color);
 
     &:hover,
     &:focus {
-      background-color: $color__btn--inv-hover;
+      background-color: $color__accent--hover;
+    }
+
+    // ! Класс для белой кнопки (инверсия)
+    &.inverted {
+      color: $color__accent;
+      background-color: $color__text--secondary;
+
+      @include transition(color, background-color);
+
+      &:hover,
+      &:focus {
+        background-color: $color__btn--inv-hover;
+      }
+    }
+
+    // Модификаторы для названия класса
+    &--medium {
+      @extend %btn;
+      @include btn-geometry(40px);
+    }
+
+    &--small {
+      @extend %btn;
+      @include btn-geometry(24px);
     }
   }
 
-  // Модификаторы для названия класса
-  &--medium {
-    @extend %btn;
-    @include btn-geometry(40px);
-  }
+  // Текст кнопки
+  %btn__label {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: $bold-weight;
+    font-size: 16px;
+    line-height: 1.3125;
+    letter-spacing: 0;
 
-  &--small {
-    @extend %btn;
-    @include btn-geometry(24px);
-  }
-}
+    // Модификаторы для названия класса
+    &--medium {
+      @extend %btn__label;
+      font-weight: $normal-weight;
+      font-size: 14px;
+      line-height: 1.2857;
+    }
 
-// Текст кнопки
-%btn__label {
-  font-family: $mainFont;
-  font-style: normal;
-  font-weight: $bold-weight;
-  font-size: 16px;
-  line-height: 1.3125;
-  letter-spacing: 0;
-
-  // Модификаторы для названия класса
-  &--medium {
-    @extend %btn__label;
-    font-weight: $normal-weight;
-    font-size: 14px;
-    line-height: 1.2857;
-  }
-
-  &--small {
-    @extend %btn__label;
-    font-weight: $normal-weight;
-    font-size: 8px;
-    line-height: 1.25;
-  }
-}
-
-// * Плейсхолдеры для кнопок
-
-// Для геометрии кнопки
-@mixin btn-geometry($base: 44px) {
-  //large 44px, medium 40px, small 24px
-  min-height: $base;
-  min-width: $base;
-  border-radius: $base / 2;
-  border-style: none;
-  cursor: pointer;
-
-  padding-left: $base / 2;
-  padding-right: $base / 2;
-}
-
-// Кнопка в трьох размерах
-%btn {
-  @include btn-geometry(44px);
-
-  font-family: inherit;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-
-  color: $color__text--secondary;
-  background-color: $color__accent;
-
-  @include transition(background-color);
-
-  &:hover,
-  &:focus {
-    background-color: $color__accent--hover;
-  }
-
-  // Класс для білої кнопки з червоним текстом (інвертована)
-  &.inverted {
-    color: $color__accent;
-    background-color: $color__text--secondary;
-
-    @include transition(color, background-color);
-
-    &:hover,
-    &:focus {
-      background-color: $color__btn--inv-hover;
+    &--small {
+      @extend %btn__label;
+      font-weight: $normal-weight;
+      font-size: 8px;
+      line-height: 1.25;
     }
   }
-
-  // Модификаторы для названия класса
-  &--medium {
-    @extend %btn;
-    @include btn-geometry(40px);
-  }
-
-  &--small {
-    @extend %btn;
-    @include btn-geometry(24px);
-  }
-}
-
-// Текст кнопки
-%btn__label {
-  font-family: $mainFont;
-  font-style: normal;
-  font-weight: $bold-weight;
-  font-size: 16px;
-  line-height: 1.3125;
-  letter-spacing: 0;
-
-  // Модификаторы для названия класса
-  &--medium {
-    @extend %btn__label;
-    font-weight: $normal-weight;
-    font-size: 14px;
-    line-height: 1.2857;
-  }
-
-  &--small {
-    @extend %btn__label;
-    font-weight: $normal-weight;
-    font-size: 8px;
-    line-height: 1.25;
-  }
-}
