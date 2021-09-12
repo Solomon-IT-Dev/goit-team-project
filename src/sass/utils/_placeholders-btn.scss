@@ -1,6 +1,5 @@
 // * Плейсхолдеры для кнопок
 
-
 // Для геометрии кнопки
 @mixin btn-geometry($base: 44px) {
   //large 44px, medium 40px, small 24px
@@ -13,7 +12,6 @@
   padding-left: $base / 2;
   padding-right: $base / 2;
 }
-
 
 // Кнопка в трьох размерах
 %btn {
@@ -29,7 +27,7 @@
   color: $color__text--secondary;
   background-color: $color__accent;
 
-  @include transition(background-color);
+  // @include transition(background-color);
 
   &:hover,
   &:focus {
@@ -41,7 +39,7 @@
     color: $color__accent;
     background-color: $color__text--secondary;
 
-    @include transition(color, background-color);
+    // @include transition(color, background-color);
 
     &:hover,
     &:focus {
