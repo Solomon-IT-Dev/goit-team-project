@@ -24,22 +24,18 @@
 }
 
 .footer__copyright-box {
-    max-width: 150px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.footer__line {
-    width: 100vw;
     border-top: 1px solid $color__slider--underscore;
 }
 
 .footer__copyright {
     @extend %footer-copyright;
 
-    // margin-left: auto;
-    // margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 24px;
     padding-bottom: 24px;
+
+    @include mq('tablet', max) {
+        max-width: 150px;
+    }
 }

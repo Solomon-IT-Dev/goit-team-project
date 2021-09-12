@@ -80,6 +80,8 @@
     }
 
     .footer__container {
-        display: flex;
+        @include mq('tablet') {
+            display: flex;
+        }
     }
 
