@@ -196,7 +196,8 @@
   }
 }
 
-.section-container__item-title {
+.products-container__item-title {
+  position: relative;
   @extend %product-card-title;
   font-size: 20px;
   line-height: 1.15;
@@ -205,6 +206,19 @@
     font-size: 30px;
     line-height: 1.13;
     margin-bottom: 70px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 6px;
+    background-image: url(../images/dots.svg);
+    @include mq('desktop') {
+      bottom: -32px;
+    }
   }
 }
 
@@ -223,7 +237,7 @@
   }
 }
 
-.section-container__button {
+.products-container__button {
   display: block;
   margin: 0 auto;
   width: 40px;
