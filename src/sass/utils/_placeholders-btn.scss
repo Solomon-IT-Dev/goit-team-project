@@ -34,7 +34,7 @@
     background-color: $color__accent--hover;
   }
 
-  // Класс для белой кнопки
+  // Класс для белой кнопки с красным текстом (инверсия)
   &.inverted {
     color: $color__accent;
     background-color: $color__text--secondary;
