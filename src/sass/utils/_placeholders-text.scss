@@ -323,7 +323,9 @@
       line-height: 22px;
       letter-spacing: 0em;
 
-      color: $color__accent;
+      color:  $color__accent;
+
+      @include transition(color);
 
       @include mq('tablet') {
         font-size: 14px;
@@ -334,6 +336,11 @@
         font-size: 16px;
         line-height: 30px;
         letter-spacing: 0.02em;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color__accent--hover;
       }
     }
 

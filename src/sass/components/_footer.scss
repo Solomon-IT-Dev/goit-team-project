@@ -2,21 +2,119 @@
     background-color: $color__bkg--mid-section;
 }
 
+.footer__title-box {
+    max-width: 234px;
+
+    @include mq('tablet') {
+        max-width: 340px;
+    }
+
+    @include mq('desktop') {
+        max-width: 474px;
+    }
+}
+
 .footer__suptitle {
     @extend %footer-suptitle;
 }
 
 .footer__title {
     @extend %footer-title;
+
+    margin-top: 17px;
+
+    @include mq('tablet') {
+        margin-top: 16px;
+    }
+
+    @include mq('desktop') {
+        margin-top: 15px;
+    }
 }
 
+.footer__contacts-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
+    margin-top: 43px;
 
+    @include mq('tablet') {
+        margin-top: 0;
+    }
+}
 
+.social-links__list {
+    width: 152px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    @include mq-tablet-only {
+        width: 162px;
+    }
+}
+
+.social-links__link {
+    width: 32px;
+    height: 32px;
+
+    @include centered-content;
+
+    border-radius: 50%;
+    background-color: $color__icon-social;
+    color: $color__text--secondary;
+
+    transform: scale(1);
+
+    @include transition(background-color, transform);
+
+    @include mq('tablet') {
+        width: 34px;
+        height: 34px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $color__accent;
+        transform: scale(1.2);
+    }
+}
+
+.social-links__icon {
+    fill: currentColor;
+}
+
+.icon-github {
+    @include mq('tablet', max) {
+        width: 18.8px;
+        height: 18.8px;
+    }
+}
+
+.icon-telegram {
+    @include mq('tablet', max) { 
+        width: 19.2px;
+        height: 14.9px;
+    }
+}
+
+.icon-facebook {
+    @include mq('tablet', max) {
+        width: 8.2px;
+        height: 19.2px;
+    }
+}
 
 .footer__call-slogan {
     @extend %footer-call-slogan;
+
+    margin-top: 46px;
+
+    @include mq('desktop') {
+        margin-top: 50px;
+    }
 }
 
 .footer__tel {
@@ -24,7 +122,20 @@
 }
 
 .footer__copyright-box {
+    margin-top: 43px;
+
     border-top: 1px solid $color__slider--underscore;
+
+    @include mq('tablet') {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 91px;
+    }
+
+    @include mq('desktop') {
+        margin-top: 97px;
+    }
 }
 
 .footer__copyright {
@@ -34,8 +145,13 @@
     margin-right: auto;
     padding-top: 24px;
     padding-bottom: 24px;
-
+    
     @include mq('tablet', max) {
         max-width: 150px;
+    }
+
+    @include mq('desktop') {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
