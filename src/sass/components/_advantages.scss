@@ -98,7 +98,6 @@
     font-size: 58px;
     line-height: 66px;
   }
-
   @extend %advantages-numbers;
 }
 
@@ -106,6 +105,9 @@
   padding-top: 19px;
   font-size: 12px;
   line-height: 20px;
+  @include mq('tablet', max) {
+    max-width: 230px;
+  }
   @include mq('tablet') {
     font-size: 14px;
     line-height: 174%;
