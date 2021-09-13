@@ -82,6 +82,7 @@
     .footer__container {
         @include mq('tablet') {
             display: flex;
+            justify-content: space-between;
         }
     }
 
