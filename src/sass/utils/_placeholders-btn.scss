@@ -27,19 +27,19 @@
   color: $color__text--secondary;
   background-color: $color__accent;
 
-  // @include transition(background-color);
+  @include transition(background-color);
 
   &:hover,
   &:focus {
     background-color: $color__accent--hover;
   }
 
-  // Класс для красной кнопкт
+  // ! Класс для белой кнопки с красным текстом (инверсия)
   &.inverted {
     color: $color__accent;
     background-color: $color__text--secondary;
 
-    // @include transition(color, background-color);
+    @include transition(color, background-color);
 
     &:hover,
     &:focus {
