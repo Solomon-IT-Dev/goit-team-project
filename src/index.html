@@ -11,6 +11,16 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/simple-adaptive-slider.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // инициализация слайдера
+        var slider = new SimpleAdaptiveSlider('.slider', {
+          autoplay: true,
+          interval: 10000,
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -18,12 +28,15 @@
     <!-- <include src="./partials/hero.html"></include> -->
     <include src="./partials/products.html"></include>
     <include src="./partials/about.html"></include>
+    <include src="./partials/reviews-slider.html"></include>
     <include src="./partials/footer.html"></include>
 
     <!-- Модальное окно должно быть после футера -->
     <include src="./partials/about-modal.html"></include>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script defer src="./js/simple-adaptive-slider.min.js"></script>
+    
     <script src="./js/modal.js"></script>
     <script src="./index.js"></script>
   </body>
