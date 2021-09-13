@@ -11,7 +11,6 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 6px;
-  //padding-bottom: 6px;
 
   margin-left: auto;
   margin-right: auto;
@@ -52,45 +51,18 @@
 }
 
 .btn--header {
-  min-height: 44px;
-  min-width: 44px;
-  border-radius: 22px;
-  border-style: none;
-  cursor: pointer;
-
-  font-family: inherit;
+  @extend %btn;
   font-family: DM Sans;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.3125;
 
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: $color__accent;
-
-  &.inverted {
-    background-color: $color__text--secondary;
-    &:hover,
-    &:focus {
-      background-color: $color__btn--inv-hover;
-    }
-  }
+  justify-content: center;
 }
 
 .btn--header__label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 21px;
-  color: $color__accent;
+  @extend %btn__label;
 }
 
 .btn--header__icon {
@@ -117,6 +89,7 @@
   margin-left: auto;
   margin-right: -7px;
   margin-bottom: 15px;
+  padding: 0;
   background-color: transparent;
 
   & .btn--header__icon {
@@ -134,6 +107,7 @@
 .inverted.btn--main-menu {
   margin-right: -15px;
   background-color: transparent;
+  padding: 0;
 
   @include mq('tablet', min) {
     display: block;
@@ -167,8 +141,8 @@
   background-color: $color__mob-menu--bkg;
   filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
 
+  @include transition(transform);
   transform: translate(calc(100% + 28px), 0);
-  transition: transform 250ms ease-in-out;
 
   &.is-open {
     transform: translate(0, 0);
@@ -203,6 +177,8 @@
   letter-spacing: 0;
   color: $color__text--secondary;
 
+  @include transition(color);
+
   &--active {
     color: $color__accent;
   }
@@ -214,12 +190,12 @@
   @include mq('desktop', max) {
     padding-top: 12px;
     padding-bottom: 12px;
-    .nav__item:first-child & {
-      padding-top: 15px;
-    }
-    .nav__item:last-child & {
-      padding-bottom: 15px;
-    }
+    // .nav__item:first-child & {
+    //   padding-top: 15px;
+    // }
+    // .nav__item:last-child & {
+    //   padding-bottom: 15px;
+    // }
   }
 
   @include mq('desktop', min) {
@@ -255,13 +231,10 @@
 }
 
 .main-menu__btn--buy {
-  //background-color: $color__text--secondary;
-  //width: 100%;
-
   margin-bottom: 19px;
 
   & .btn--header__icon {
-    margin-left: 30px;
+    margin-left: 25px;
     stroke: $color__accent;
   }
 
@@ -278,15 +251,19 @@
 .main-menu__btn--buy-tablet {
   display: none;
   width: 160px;
+  align-items: center;
+
   & .btn--header__icon {
+    height: 1.3125ex;
+    width: auto;
     margin-left: 15px;
     stroke: $color__accent;
   }
 
   @include mq('tablet', min) {
-    display: block;
+    display: flex;
     & .btn--header__icon {
-      margin-right: 0;
+      //margin-right: 0;
     }
   }
 }
