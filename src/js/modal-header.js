@@ -1,19 +1,18 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-    // body: document.querySelector('[data-body]'),
+    openModalBtn: document.querySelector('[data-head-open]'),
+    openModalBtnMenu: document.querySelector('[data-head-open-menu]'),
+    closeModalBtn: document.querySelector('[data-head-close]'),
+    modal: document.querySelector('[data-head-modal]'),
   };
 
-  
-
   refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtnMenu.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
   
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
-    // refs.body.classList.toggle('is-overflow-hidden');
-    document.body.classList.toggle("is-overflow-hidden");
+    //document.body.classList.toggle("modal-open");
+    document.body.classList.toggle("is-noscroll");
   }
 })();

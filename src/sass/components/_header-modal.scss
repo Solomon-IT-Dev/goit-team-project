@@ -1,0 +1,23 @@
+.backdrop--header {
+  @extend .backdrop-about;
+  z-index: 20;
+}
+
+.modal--header {
+  @extend .modal-about;
+  background-color: $color__text--secondary;
+}
+
+.modal--header__thumb {
+  display: block;
+  min-width: 100px;
+  margin-bottom: 10px;
+
+  & > img {
+    margin: auto;
+  }
+}
+
+.modal--header__text {
+  @extend .modal-about__text;
+}
