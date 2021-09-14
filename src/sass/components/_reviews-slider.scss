@@ -1,0 +1,131 @@
+.reviews {
+  padding-top: 60px;
+  padding-bottom: 65px;
+}
+
+.reviews__article {
+  margin-left: auto;
+  margin-right: auto;
+  @include mq('tablet', 'max') {
+    max-width: 450px;
+  }
+  @include mq('tablet') {
+    width: 620px;
+  }
+  @include mq('desktop') {
+    width: 926px;
+  }
+}
+
+/* дополнительные стили для этого примера */
+.slider__items {
+  counter-reset: slide;
+}
+
+.slider__item {
+  overflow: hidden;
+  position: relative;
+  counter-increment: slide;
+}
+
+.reviews__item-img {
+  @include centered-content;
+  margin-bottom: 29px;
+  width: 100%;
+  @include mq('tablet') {
+    margin-bottom: 19px;
+  }
+  @include mq('desktop') {
+    margin-bottom: 15px;
+  }
+}
+.reviews__item-box {
+  position: relative;
+  width: 100%;
+  background-color: #fafafa;
+  @include centered-content;
+  padding: 43px 50px;
+  margin-bottom: 30px;
+  @include mq('tablet') {
+    padding: 30px 38px;
+    margin-bottom: 42px;
+  }
+  @include mq('desktop') {
+    padding: 32px 55px;
+    margin-bottom: 34px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 32px;
+    z-index: 1;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/reviews-quotes.svg);
+  }
+}
+.reviews__item-bg-box {
+  padding: 0 10px;
+  @include mq('tablet') {
+    padding: 0 32px;
+  }
+  @include mq('desktop') {
+    padding: 0 36px;
+  }
+  background-image: repeating-linear-gradient(
+    to top,
+    #fafafa,
+    #fafafa 30px,
+    #e1e1e1 30px,
+    #e1e1e1 31px
+  );
+}
+.reviews__item {
+  position: relative;
+  z-index: 5;
+  @extend %customer-text;
+  font-size: 12px;
+  line-height: 2.55;
+  @include mq('tablet') {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+  @include mq('desktop') {
+    font-size: 16px;
+    line-height: 1.86;
+  }
+}
+.reviews__name {
+  position: relative;
+  @include centered-content;
+  @extend %customer-name;
+  font-size: 14px;
+  line-height: 1.86;
+  @include mq('tablet') {
+    font-size: 16px;
+  }
+  @include mq('desktop') {
+    font-size: 20px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 6px;
+    background-image: url(../images/dots-red.svg);
+  }
+}
+
+.slider__indicators-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  background-color: white;
+}
