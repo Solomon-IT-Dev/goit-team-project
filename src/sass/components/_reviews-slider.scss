@@ -1,3 +1,7 @@
+.reviews {
+  padding-top: 60px;
+  padding-bottom: 65px;
+}
 @media screen and (max-width: 767px) {
   .slider {
     max-width: 450px;
@@ -8,9 +12,9 @@
     width: 620px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .slider {
-    width: 920px;
+    width: 926px;
   }
 }
 /* дополнительные стили для этого примера */
@@ -19,84 +23,77 @@
 }
 
 .slider__item {
-  height: 320px;
   overflow: hidden;
   position: relative;
   counter-increment: slide;
 }
 
-img {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-  border-radius: 50%;
+.reviews__item-img {
+  @include centered-content;
+  margin-bottom: 15px;
 }
-
-.slider__item_inner {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  top: 36px;
-  bottom: 36px;
-  overflow: hidden;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.slider__item_img {
-  flex: 0 0 80px;
-  max-width: 80px;
-}
-
-.slider__item_testimonial {
-  flex: 1 0 0;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-@media (min-width: 576px) {
-  .slider__item {
-    height: 250px;
+.reviews__item-box {
+  position: relative;
+  @include centered-content;
+  @include mq('tablet') {
+    padding: 30px 38px;
+    margin-bottom: 42px;
   }
-
-  .slider__item_inner {
-    flex-direction: row;
+  @include mq('desktop') {
+    padding: 32px 55px;
+    margin-bottom: 34px;
   }
-
-  .slider__item_testimonial {
-    margin-left: 15px;
-  }
-
-  .slider__item_img {
-    flex: 0 0 150px;
-    max-width: 150px;
-  }
-
-  .slider__item_testimonial {
-    text-align: left;
+  width: 100%;
+  background-color: #fafafa;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 32px;
+    z-index: 1;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/reviews-quotes.svg);
   }
 }
-
-.slider__item_name {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #000;
+.reviews__item-bg-box {
+  @include mq('tablet') {
+    padding: 0 32px;
+  }
+  @include mq('desktop') {
+    padding: 0 36px;
+  }
+  background-image: repeating-linear-gradient(
+    to top,
+    #fafafa,
+    #fafafa 30px,
+    #e1e1e1 30px,
+    #e1e1e1 31px
+  );
 }
-
-.slider__item_post {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #000;
-}
-
-.slider__item_text {
+.reviews__item {
+  position: relative;
+  z-index: 5;
+  @extend %customer-text;
   font-size: 16px;
-  color: #000;
+  line-height: 1.86;
+}
+.reviews__name {
+  position: relative;
+  @include centered-content;
+  @extend %customer-name;
+  font-size: 20px;
+  line-height: 1.86;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 6px;
+    background-image: url(../images/dots-red.svg);
+  }
 }
 
 .slider__indicators-box {
