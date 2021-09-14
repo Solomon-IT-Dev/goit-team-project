@@ -4,9 +4,11 @@
 }
 
 .reviews__article {
-  // @include mq('tablet', 'max') {
-  max-width: 450px;
-  // }
+  margin-left: auto;
+  margin-right: auto;
+  @include mq('tablet', 'max') {
+    max-width: 450px;
+  }
   @include mq('tablet') {
     width: 620px;
   }
