@@ -16,6 +16,10 @@
   position: relative;
   // outline: 1px solid aquamarine;
   padding-top: 105px;
+  @include mq('tablet', max) {
+    margin: 0 auto;
+    width: 80%;
+  }
   @include mq-tablet-only {
     width: calc((100% - 120px) / 3);
     padding-top: 112px;
