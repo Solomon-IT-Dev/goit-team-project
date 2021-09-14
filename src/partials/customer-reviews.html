@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" />
+        <link rel="stylesheet" href="../sass/main.css" />
         <link rel="javascript" href="../swiper.js" />
 </head>
 <body>
@@ -15,32 +16,32 @@
     <div class="reviews_con container">
         <ul class="reviews_slide">
             <li>
-                <div class="reviews_photo">
-                    <picture>
+            <div class="reviews_page">
+                <div >
+                    <picture class="reviews_photo">
                         <source
-                            srcset="../images/reviews-client1.png 1x, ../images/reviews-client1@2x.pnj 2x, ../images/reviews-client1@3x.png 3x">
+                            srcset="../images/reviews-client1.png 1x, ../images/reviews-client1@2x.png 2x, ../images/reviews-client1@3x.png 3x">
                         <img src="../images/reviews-client1.png" alt="Author image">
                     </picture>
-
-                    <p>Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
-                congue. Lorem ipsum primis in nibh vel risus.</p>
-                    
+                </div>
+                    <div class="reviews_text">
+                        <p>Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.</p>
+                    </div>
                 <h2 class="reviews_name-adres">
                     Emily, Los Angeles
                 </h2>
+            </div>
                 <div class="reviews_pagination"></div>
-
-                </div>
-                
             </li>
             <li>
-                <div class="reviews">
+                <div class="reviews_page">
+                <div class="reviews_photo">
                     <picture>
                         <source
-                            srcset="../images/reviews-client2.png 1x, ../images/reviews-client2@2x.pnj 2x, ../images/reviews-client2@3x.png 3x">
+                            srcset="../images/reviews-client2.png 1x, ../images/reviews-client2@2x.png 2x, ../images/reviews-client2@3x.png 3x">
                         <img src="../images/reviews-client2.png" alt="Author image">
                     </picture>
-                    
+                    </div>
                 
                     <p>Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc,
                         accumsan
@@ -49,24 +50,25 @@
                     <h2 class="reviews_name-adres">
                         Dory, Chicago
                     </h2>
-                
                 </div>
+                <div class="reviews_pagination"></div>
             </li>
             <li>
-                <div class="reviews">
+                <div class="reviews_page">
+                <div class="reviews_photo">
                     <picture>
-                        <source srcset="../images/reviews-client3.png 1x, ../images/reviews-client3@2x.pnj 2x, ../images/reviews-client3@3x.png 3x">
+                        <source srcset="../images/reviews-client3.png 1x, ../images/reviews-client3@2x.png 2x, ../images/reviews-client3@3x.png 3x">
                         <img src="../images/reviews-client3.png" alt="Author image">
                     </picture>
-                    
+                    </div>
                 
                     <p>Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc.</p>
                 
                     <h2 class="reviews_name-adres">
                         Lora, New York
                     </h2>
-                
                 </div>
+                <div class="reviews_pagination"></div>
             </li>
         </ul> 
     </div>
