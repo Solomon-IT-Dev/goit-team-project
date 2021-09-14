@@ -1,13 +1,19 @@
 //@import './utils/placeholders';
 
 .header {
-  position: relative;
+  //position: relative;
   background-color: $color__bkg--col-1;
+
+  margin-bottom: -56px; //to visually merge with hero section
+  @include mq('tablet', min) {
+    margin-bottom: -87px;
+  }
 }
 
 .container--header {
+  z-index: 15;
+  position: relative;
   max-width: $phone;
-  //height: 62px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 6px;
@@ -128,13 +134,13 @@
 
 .main-menu {
   display: flex;
-  z-index: 10;
+  z-index: 16;
   padding-top: 8px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 15px;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
 
@@ -168,6 +174,10 @@
     padding: 0;
     background-color: transparent;
   }
+}
+
+.is-noscroll {
+  overflow-y: hidden;
 }
 
 .main-menu__item {
