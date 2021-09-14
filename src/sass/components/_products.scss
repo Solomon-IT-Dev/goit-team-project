@@ -62,6 +62,13 @@
     width: calc((100% - 60px) / 3);
     padding: 163px 44px 50px;
   }
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: $button-linear1 0px 54px 55px, $button-linear2 0px -12px 30px,
+      $button-linear3 0px 4px 6px, $button-linear4 0px 12px 13px, $button-linear5 0px -3px 5px;
+  }
   &:nth-of-type(1),
   &:nth-of-type(2),
   &:nth-of-type(3) {
@@ -243,7 +250,30 @@
   height: 40px;
   border-radius: 100%;
   background-color: $color__text--secondary;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   & svg {
     fill: $color__accent;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-image: linear-gradient(
+      to right,
+      $button-linear1,
+      $button-linear2,
+      $button-linear3,
+      $button-linear4,
+      $button-linear5,
+      $button-linear6
+    );
+  }
+  animation: slidebg 5s linear infinite;
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    }
   }
 }

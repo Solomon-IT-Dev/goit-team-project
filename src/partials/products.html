@@ -3,18 +3,32 @@
     <span class="products-container__suptitle">100% natural</span>
     <h2 class="products-container__title">products</h2>
     <ul class="products-container__list list">
-
       <li class="products-container__item">
         <h3 class="products-container__item-title">ice cream</h3>
         <p class="products-container__description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et
         </p>
-        <button class="products-container__button tertiary-button button">
+        <button class="products-container__button tertiary-button button" data-popup-open>
           <svg width="11px" height="10px">
             <use href="./images/icons.svg#icon-arrow-right"></use>
           </svg>
         </button>
+        <div class="popup popup--is-hidden" data-popup>
+          <div class="popup-info popup-info--icecream">
+            <p class="products-container__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptates
+              blanditiis beatae ipsam, dolore praesentium quidem soluta? Ea unde incidunt similique
+              recusandae autem cum alias accusamus impedit natus reprehenderit assumenda, molestiae
+              nulla odit laboriosam!
+            </p>
+            <button class="products-container__button tertiary-button button" data-popup-close>
+              <svg width="11px" height="10px">
+                <use href="./images/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </li>
 
       <li class="products-container__item">
@@ -23,11 +37,27 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et
         </p>
-        <button class="products-container__button tertiary-button button">
+        <button class="products-container__button tertiary-button button" data-popup-open>
           <svg width="11px" height="10px">
             <use href="./images/icons.svg#icon-arrow-right"></use>
           </svg>
         </button>
+
+        <div class="popup popup--is-hidden" data-popup>
+          <div class="popup-info popup-info--icecoffee">
+            <p class="products-container__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptates
+              blanditiis beatae ipsam, dolore praesentium quidem soluta? Ea unde incidunt similique
+              recusandae autem cum alias accusamus impedit natus reprehenderit assumenda, molestiae
+              nulla odit laboriosam!
+            </p>
+            <button class="products-container__button tertiary-button button" data-popup-close>
+              <svg width="11px" height="10px">
+                <use href="./images/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </li>
 
       <li class="products-container__item">
@@ -36,13 +66,28 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et
         </p>
-        <button class="products-container__button tertiary-button button">
+        <button class="products-container__button tertiary-button button" data-popup-open>
           <svg width="11px" height="10px">
             <use href="./images/icons.svg#icon-arrow-right"></use>
           </svg>
         </button>
-      </li>
 
+        <div class="popup popup--is-hidden" data-popup>
+          <div class="popup-info popup-info--milkshake">
+            <p class="products-container__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptates
+              blanditiis beatae ipsam, dolore praesentium quidem soluta? Ea unde incidunt similique
+              recusandae autem cum alias accusamus impedit natus reprehenderit assumenda, molestiae
+              nulla odit laboriosam!
+            </p>
+            <button class="products-container__button tertiary-button button" data-popup-close>
+              <svg width="11px" height="10px">
+                <use href="./images/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
 </section>
