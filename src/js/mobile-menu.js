@@ -12,7 +12,8 @@
     //menuRef.classList.toggle("visually-hidden");
     //mainRef.classList.toggle("is-overflow-hidden");
     const expanded = menuBtn.getAttribute("aria-expanded") === "true" || false;
-    menuBtn.setAttribute("aria-expanded", !expanded)
-    menuBtnClose.setAttribute("aria-expanded", !expanded)
+    menuBtn.setAttribute("aria-expanded", !expanded);
+    menuBtnClose.setAttribute("aria-expanded", !expanded);
+    document.body.classList.toggle("is-noscroll");
   }
 })();
