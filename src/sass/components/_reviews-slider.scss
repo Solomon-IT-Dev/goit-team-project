@@ -2,21 +2,19 @@
   padding-top: 60px;
   padding-bottom: 65px;
 }
-@media screen and (max-width: 767px) {
-  .slider {
-    max-width: 450px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .slider {
+
+.reviews__article {
+  // @include mq('tablet', 'max') {
+  max-width: 450px;
+  // }
+  @include mq('tablet') {
     width: 620px;
   }
-}
-@media screen and (min-width: 1280px) {
-  .slider {
+  @include mq('desktop') {
     width: 926px;
   }
 }
+
 /* дополнительные стили для этого примера */
 .slider__items {
   counter-reset: slide;
@@ -30,11 +28,22 @@
 
 .reviews__item-img {
   @include centered-content;
-  margin-bottom: 15px;
+  margin-bottom: 29px;
+  width: 100%;
+  @include mq('tablet') {
+    margin-bottom: 19px;
+  }
+  @include mq('desktop') {
+    margin-bottom: 15px;
+  }
 }
 .reviews__item-box {
   position: relative;
+  width: 100%;
+  background-color: #fafafa;
   @include centered-content;
+  padding: 43px 50px;
+  margin-bottom: 30px;
   @include mq('tablet') {
     padding: 30px 38px;
     margin-bottom: 42px;
@@ -43,8 +52,6 @@
     padding: 32px 55px;
     margin-bottom: 34px;
   }
-  width: 100%;
-  background-color: #fafafa;
   &::after {
     content: '';
     position: absolute;
@@ -57,6 +64,7 @@
   }
 }
 .reviews__item-bg-box {
+  padding: 0 10px;
   @include mq('tablet') {
     padding: 0 32px;
   }
@@ -75,15 +83,30 @@
   position: relative;
   z-index: 5;
   @extend %customer-text;
-  font-size: 16px;
-  line-height: 1.86;
+  font-size: 12px;
+  line-height: 2.55;
+  @include mq('tablet') {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+  @include mq('desktop') {
+    font-size: 16px;
+    line-height: 1.86;
+  }
 }
 .reviews__name {
   position: relative;
   @include centered-content;
   @extend %customer-name;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.86;
+  @include mq('tablet') {
+    font-size: 16px;
+  }
+  @include mq('desktop') {
+    font-size: 20px;
+  }
+
   &::before {
     content: '';
     position: absolute;
