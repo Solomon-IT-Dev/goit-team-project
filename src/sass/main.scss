@@ -11,10 +11,11 @@
 @import './utils/placeholders-btn';
 @import './utils/visually-hidden';
 @import './base/base';
-// @import './components/hero';
+@import './components/header';
+@import './components/hero';
 @import './components/products';
 @import './components/about';
-@import './components/advantages-section';
 @import './components/about-modal';
-
+@import './components/advantages';
+@import './components/contacts';
 @import './components/footer';
