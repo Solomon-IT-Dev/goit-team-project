@@ -42,6 +42,7 @@
 
   &__icon {
     fill: $color__accent;
+    //stroke: $color__text--secondary; //inluded in svg
     margin-right: 19px;
   }
 
@@ -71,12 +72,12 @@
   stroke: $color__text--secondary;
   overflow: visible;
 
-  &.inverted {
+  .inverted.btn--header & {
     stroke: $color__accent;
+  }
 
-    .btn--header:hover & {
-      stroke: $color__accent--hover;
-    }
+  .inverted.btn--header:hover & {
+    stroke: $color__accent--hover;
   }
 }
 
@@ -95,6 +96,9 @@
   & .btn--header__icon {
     stroke: $color__text--secondary;
   }
+  &:hover .btn--header__icon {
+    stroke: $color__accent--hover;
+  }
 
   @include mq('tablet', min) {
     margin-right: -5px;
@@ -108,9 +112,9 @@
   margin-right: -15px;
   background-color: transparent;
   padding: 0;
+  display: block;
 
   @include mq('tablet', min) {
-    display: block;
     margin-right: 15px; //175px;
   }
   @include mq('desktop', min) {
@@ -262,8 +266,8 @@
 
   @include mq('tablet', min) {
     display: flex;
-    & .btn--header__icon {
-      //margin-right: 0;
-    }
+    //& .btn--header__icon {
+    //margin-right: 0;
+    //}
   }
 }
