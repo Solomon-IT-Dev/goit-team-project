@@ -1,0 +1,269 @@
+//@import './utils/placeholders';
+
+.header {
+  position: relative;
+  background-color: $color__bkg--col-1;
+}
+
+.container--header {
+  max-width: $phone;
+  //height: 62px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq('tablet', min) {
+    max-width: $tablet;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 37px;
+  }
+
+  @include mq('desktop', min) {
+    max-width: 1280px;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+}
+
+.logo--header {
+  display: flex;
+  align-items: center;
+
+  @extend %logo-text;
+  letter-spacing: -0.025em;
+
+  &__icon {
+    fill: $color__accent;
+    margin-right: 19px;
+  }
+
+  @include mq('desktop', min) {
+    margin-left: -70px;
+  }
+}
+
+.btn--header {
+  @extend %btn;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3125;
+
+  justify-content: center;
+}
+
+.btn--header__label {
+  @extend %btn__label;
+}
+
+.btn--header__icon {
+  display: block;
+  fill: $color__text--secondary;
+  stroke: $color__text--secondary;
+  overflow: visible;
+
+  &.inverted {
+    stroke: $color__accent;
+
+    .btn--header:hover & {
+      stroke: $color__accent--hover;
+    }
+  }
+}
+
+.centered-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inverted.main-menu__btn--close {
+  margin-left: auto;
+  margin-right: -7px;
+  margin-bottom: 15px;
+  padding: 0;
+  background-color: transparent;
+
+  & .btn--header__icon {
+    stroke: $color__text--secondary;
+  }
+
+  @include mq('tablet', min) {
+    margin-right: -5px;
+  }
+  @include mq('desktop', min) {
+    display: none;
+  }
+}
+
+.inverted.btn--main-menu {
+  margin-right: -15px;
+  background-color: transparent;
+  padding: 0;
+
+  @include mq('tablet', min) {
+    display: block;
+    margin-right: 15px; //175px;
+  }
+  @include mq('desktop', min) {
+    display: none;
+  }
+}
+
+.header-buttons {
+  display: flex;
+}
+
+.main-menu {
+  display: flex;
+  z-index: 10;
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  width: 250px;
+  height: 100vh;
+  background-color: $color__mob-menu--bkg;
+  filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
+
+  @include transition(transform);
+  transform: translate(calc(100% + 28px), 0);
+
+  &.is-open {
+    transform: translate(0, 0);
+  }
+
+  @include mq('tablet', min) {
+    width: 254px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @include mq('desktop', min) {
+    position: static;
+    transform: translate(0, 0);
+    transition: none;
+    //flex-direction: row;
+    height: auto;
+    width: auto;
+    filter: none;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.main-menu__item {
+  display: block;
+
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2857;
+  letter-spacing: 0;
+  color: $color__text--secondary;
+
+  @include transition(color);
+
+  &--active {
+    color: $color__accent;
+  }
+  &:hover,
+  &:focus {
+    color: $color__accent;
+  }
+
+  @include mq('desktop', max) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    // .nav__item:first-child & {
+    //   padding-top: 15px;
+    // }
+    // .nav__item:last-child & {
+    //   padding-bottom: 15px;
+    // }
+  }
+
+  @include mq('desktop', min) {
+    font-size: 16px;
+    line-height: 1.3125;
+  }
+}
+
+.nav-list {
+  @include mq('desktop', min) {
+    display: flex;
+  }
+}
+
+.nav__item {
+  @include mq('desktop', max) {
+    &::after,
+    &:not(:last-child)::before {
+      display: block;
+      content: '';
+      margin-left: -20px;
+      margin-right: -20px;
+      width: calc(100% + 2 * 20px);
+      height: 1px;
+      background-color: $color__mob-menu--separator;
+    }
+  }
+  @include mq('desktop', min) {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+}
+
+.main-menu__btn--buy {
+  margin-bottom: 19px;
+
+  & .btn--header__icon {
+    margin-left: 25px;
+    stroke: $color__accent;
+  }
+
+  @include mq('tablet', min) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @include mq('desktop', min) {
+    display: none;
+  }
+}
+
+.main-menu__btn--buy-tablet {
+  display: none;
+  width: 160px;
+  align-items: center;
+
+  & .btn--header__icon {
+    height: 1.3125ex;
+    width: auto;
+    margin-left: 15px;
+    stroke: $color__accent;
+  }
+
+  @include mq('tablet', min) {
+    display: flex;
+    & .btn--header__icon {
+      //margin-right: 0;
+    }
+  }
+}
