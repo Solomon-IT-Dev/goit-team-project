@@ -14,8 +14,10 @@
     padding-top: 97px;
     padding-bottom: 80px;
   }
-  @media (max-width: $phone) {
+  @media (max-width: 479px) {
     grid-template-rows: [row1] 35px [row2] 35px [row3] 35px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
