@@ -23,6 +23,16 @@
 
 .grid__item {
   margin: 5px;
+
+  transform: scale(1);
+
+  @include transition (transform);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.07);
+  }
+
   @media (max-width: $befor-tablet) {
     margin: 3px;
   }
