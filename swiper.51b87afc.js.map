@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/swiper.js"],"names":["Swiper","pagination","el","clickable"],"mappings":";AAAA,IAAIA,OAAO,kBAAmB,CAC1BC,WAAY,CACRC,GAAI,qBACJC,WAAW","file":"swiper.51b87afc.js","sourceRoot":"../src","sourcesContent":["new Swiper('.reviews-slider', {\n    pagination: {\n        el: '.swiper-pagination',\n        clickable: true,\n    }\n});"]}
