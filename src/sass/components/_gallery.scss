@@ -27,8 +27,11 @@
 .grid__item {
   margin: 5px;
 
-  transform: scale(1);
+  @media (max-width: $befor-tablet) {
+    margin: 3px;
+  }
 
+  transform: scale(1);
   @include transition (transform);
 
   &:hover,
@@ -36,8 +39,11 @@
     transform: scale(1.07);
   }
 
-  @media (max-width: $befor-tablet) {
-    margin: 3px;
+  @include mq('desktop'){
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+     }
   }
 }
 
