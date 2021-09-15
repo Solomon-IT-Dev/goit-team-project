@@ -235,6 +235,10 @@
   @extend %contacts-tel-mail;
   font-size: $text-xxs;
   line-height: 1.5;
+  &:hover,
+  &:focus {
+    color: $color__accent;
+  }
   @media (min-width: 768px) {
     font-size: 14px;
   }
