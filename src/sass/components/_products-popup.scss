@@ -5,13 +5,13 @@
   pointer-events: none;
   & .popup-info {
     &--icecream {
-      transform: translatex(-100%);
+      transform: translatey(100%);
     }
     &--icecoffee {
       transform: translatey(100%);
     }
     &--milkshake {
-      transform: translatex(100%);
+      transform: translatey(100%);
     }
   }
 }

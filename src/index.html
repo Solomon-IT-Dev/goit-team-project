@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="./icons/logo-hq.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   </head>
 
   <body id="scroll">
@@ -21,6 +22,7 @@
     <include src="./partials/about.html"></include>
     <include src="./partials/advantages.html"></include>
     <include src="./partials/reviews-slider.html"></include>
+    <include src="./partials/slider.html"></include>
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
 
@@ -29,7 +31,14 @@
     <include src="./partials/about-modal.html"></include>
     <include src="./partials/modal-locations.html"></include>
     
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->    
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script type="module">
+      import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+
+      const swiper = new Swiper(...)
+    </script>
     <script defer src="./js/simple-adaptive-slider.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
