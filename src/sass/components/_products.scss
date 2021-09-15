@@ -51,7 +51,7 @@
   @include mq('tablet', max) {
     padding: 161px 40px 41px;
     &:not(:last-of-type) {
-      margin-bottom: 130px;
+      margin-bottom: 146px;
     }
   }
   @include mq-tablet-only {
@@ -64,11 +64,25 @@
   }
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    box-shadow: $button-linear1 0px 54px 55px, $button-linear2 0px -12px 30px,
+
+  &:hover:nth-of-type(1),
+  &:focus:nth-of-type(1) {
+    box-shadow: $button-linear1 0px 54px 55px, $button-linear4 0px -12px 30px,
+      $button-linear3 0px 4px 6px, $button-linear2 0px 12px 13px, $button-linear5 0px -3px 5px;
+  }
+
+  &:hover:nth-of-type(2),
+  &:focus:nth-of-type(2) {
+    box-shadow: $button-linear2 0px 54px 55px, $button-linear1 0px -12px 30px,
       $button-linear3 0px 4px 6px, $button-linear4 0px 12px 13px, $button-linear5 0px -3px 5px;
   }
+
+  &:hover:nth-of-type(3),
+  &:focus:nth-of-type(3) {
+    box-shadow: $button-linear4 0px 54px 55px, $button-linear2 0px -12px 30px,
+      $button-linear3 0px 4px 6px, $button-linear1 0px 12px 13px, $button-linear5 0px -3px 5px;
+  }
+
   &:nth-of-type(1),
   &:nth-of-type(2),
   &:nth-of-type(3) {
