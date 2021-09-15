@@ -17,17 +17,6 @@
   }
 }
 
-/* дополнительные стили для этого примера */
-.slider__items {
-  counter-reset: slide;
-}
-
-.slider__item {
-  overflow: hidden;
-  position: relative;
-  counter-increment: slide;
-}
-
 .reviews__item-img {
   @include centered-content;
   margin-bottom: 29px;
@@ -120,12 +109,56 @@
     background-image: url(../images/dots-red.svg);
   }
 }
-
-.slider__indicators-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 100%;
-  background-color: white;
+.swiper-pagination {
+  bottom: -10px;
 }
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 18px;
+  margin-left: 18px;
+  background-color: red;
+
+  cursor: pointer;
+}
+// .slider__indicators-box {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 30px;
+//   width: 100%;
+//   background-color: white;
+// }
+// .slider__indicators {
+//   /* position: absolute; */
+//   /* left: 0;
+//   right: 0;
+//   bottom: 10px; */
+//   display: flex;
+//   justify-content: center;
+//   padding-left: 0;
+//   margin: 0 15%;
+//   list-style: none;
+//   user-select: none;
+// }
+
+// .slider__indicator {
+//   flex: 0 1 auto;
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 50%;
+//   margin-right: 18px;
+//   margin-left: 18px;
+//   background-color: #d9d9d9;
+//   background-clip: padding-box;
+//   /* border-top: 10px solid transparent;
+//   border-bottom: 10px solid transparent; */
+//   cursor: pointer;
+// }
+
+// .slider__indicator_active {
+//   border-radius: 0;
+//   background-color: transparent;
+//   background-image: url(../images/home.svg);
+// }
